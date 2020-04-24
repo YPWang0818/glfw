@@ -42,13 +42,17 @@ project "GLFW"
 		}
 
 	filter "configurations:Debug"
+	
+		buildoptions "/MDd"
 		runtime "Debug"
 		symbols "on"
 
 	filter "configurations:Release"
+		buildoptions "/MD"
 		runtime "Release"
 		optimize "on"
 		
 	filter "configurations:Dist"
+		buildoptions "/MD"
 		runtime "Release"
 		optimize "speed"
